@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+ext.installationId = '10000'
+ext.pubPssB64 = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr71MZyS6SbkNmR9mS7TCKPUhn4j+A0Ju0y/vh2mpjkNzA++KGSrYAEvOUXuzhcUoP87jLymSQB/qH7KpCrXHyqAFcIBbdOGkJmrMGkhBpQmkMpeE9RSohTyIpoDT0Q6O5EN2BO2wk1NnfjTUQbdQ+5PK2rtJtfjKXUZBZ2Uy5qlzf/+yOQk5Qh6T5PjdipkYzYRPm7SDyhIUoEid4o3h/bfVZ36/zvxKZPxn3YY3A1307HsVOvxMSuoR69vebTypjlEltqB5h7GdesUuE1ACKowMdEKiL8CzjuEYXzVP4rzTNEa8rBdljtsKuNjXc829bl+3/qAJy+gjH9544DiefQIDAQAB'
+ext.serverUrl = 'http://3.125.121.188:9080'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.okaythis.okaypoc"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "PUB_PSS_B64", "\"$pubPssB64\""
+        buildConfigField "String", "INSTALLATION_ID", "\"$installationId\""
+        buildConfigField "String", "SERVER_URL", "\"$serverUrl\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    def lifecycle_version = "2.1.0"
+    def compose_version = "0.1.0-dev02"
+    def koin_version = "2.0.1"
+    def ktx_reactive_stream = "2.2.0-rc03"
+    def retrofit_version = "2.6.0"
+    def gson_version = "2.8.5"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.okaythis.sdk:psa:1.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+
+    // androidx
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$ktx_reactive_stream"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$ktx_reactive_stream"
+
+    // optional - Test helpers for LiveData
+    testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+
+    // retrofit
+    implementation "com.google.code.gson:gson:$gson_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+
+    // ui - compose
+    implementation "androidx.ui:ui-tooling:$compose_version"
+    implementation "androidx.ui:ui-layout:$compose_version"
+    implementation "androidx.ui:ui-material:$compose_version"
+
+    // Koin
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-scope:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+}
+apply plugin: 'com.google.gms.google-services'
