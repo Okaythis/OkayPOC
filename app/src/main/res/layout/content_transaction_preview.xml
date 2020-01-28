@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.transactionpreview.TransactionPreview"
+    tools:showIn="@layout/activity_transaction_preview">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/c_layout_padding"
+            android:paddingStart="@dimen/c_layout_padding"
+            android:paddingLeft="@dimen/c_layout_padding"
+            android:paddingTop="@dimen/c_layout_padding_top"
+            android:paddingEnd="@dimen/c_layout_padding"
+            android:paddingRight="@dimen/c_layout_padding"
+            >
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:background="@color/c_light_gray"
+            app:layout_constraintEnd_toEndOf="@+id/priceTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/itemNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextViewLabel" />
+
+        <TextView
+            android:id="@+id/transactiondDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_padding_top"
+            android:text="Please confirm the contents of the transaction below. A synchronous request between your server and Okaythis server that checks the authorization status of a session – Your server should perform this call to check session statuses."
+            android:textAlignment="textStart"
+            android:textColor="@color/c_black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_thirty_dp"
+            android:text="@string/item_name"
+            android:textColor="@color/c_black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/transactiondDescription"
+            app:layout_constraintTop_toBottomOf="@+id/transactiondDescription" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_thirty_dp"
+            android:text="0"
+            android:textColor="@color/c_black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/transactiondDescription"
+            app:layout_constraintTop_toBottomOf="@+id/transactiondDescription" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:background="@color/c_light_gray"
+            app:layout_constraintEnd_toEndOf="@+id/priceTextView"
+            app:layout_constraintStart_toStartOf="@+id/itemNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/itemNameTextView" />
+
+        <TextView
+            android:id="@+id/issuerTextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:text="@string/issuer"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/itemNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/issuerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:text="Nil"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@+id/priceTextView"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/dateTextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:text="Date "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/issuerTextViewLabel"
+            app:layout_constraintTop_toBottomOf="@+id/issuerTextViewLabel" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:text="Nil"
+            android:textAlignment="viewEnd"
+            app:layout_constraintEnd_toEndOf="@+id/issuerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/issuerTextView" />
+
+        <TextView
+            android:id="@+id/shippingTextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:text="@string/shipping"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/shippingCostTextView"
+            app:layout_constraintTop_toTopOf="@+id/shippingCostTextView" />
+
+        <TextView
+            android:id="@+id/shippingCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/amount_currency_margin"
+            android:text="0"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView25"
+            app:layout_constraintEnd_toStartOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/taxCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/amount_currency_margin"
+            android:text="0"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView24"
+            app:layout_constraintEnd_toStartOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/taxCostTextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tax"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/shippingTextViewLabel"
+            app:layout_constraintTop_toTopOf="@+id/taxCostTextView" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/currencyTextView"
+            app:layout_constraintEnd_toStartOf="@+id/totalAmountTextView"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/totalAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="@dimen/amount_currency_margin"
+            android:text="0"
+            android:textColor="@color/c_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/currencyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/taxCostTextView" />
+
+        <TextView
+            android:id="@+id/currencyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="$"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taxCostTextView" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:text="$"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            android:text="$"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/divider2"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/authenticate_with"
+            android:textColor="@color/c_light_gray_font"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.187"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/faceidTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/c_layout_margin_between_components"
+            android:text="@string/biometric"
+            android:textColor="@color/c_black"
+            android:textSize="@dimen/auth_options_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="@+id/imageButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageButton3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            app:layout_constraintStart_toStartOf="@+id/imageButton"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pin_code"
+            android:textColor="@color/c_black"
+            android:textSize="@dimen/auth_options_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+            app:layout_constraintStart_toStartOf="@+id/faceidTextView" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/c_layout_margin_between_components"
+            app:layout_constraintStart_toStartOf="@+id/imageButton3"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one_click"
+            android:textColor="@color/c_black"
+            android:textSize="@dimen/auth_options_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/textView28" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

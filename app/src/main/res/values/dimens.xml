@@ -1,3 +1,31 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--    Button values-->
+    <dimen name="c_button_height">55dp</dimen>
+    <dimen name="c_button_corner_radius">12dp</dimen>
+    <dimen name="c_button_padding">12dp</dimen>
+    <dimen name="c_button_margin_top">10dp</dimen>
+    <dimen name="c_button_margin_below">10dp</dimen>
+    <dimen name="c_button_margin_half_top">5dp</dimen>
+    <dimen name="c_button_bottom_margin">12dp</dimen>
+    <dimen name="c_button_elevation">6dp</dimen>
+
+    <dimen name="c_twenty_dp">20dp</dimen>
+    <dimen name="c_thirty_dp">30dp</dimen>
+    <dimen name="c_forty_dp">40dp</dimen>
+
+    <!--    Layout values -->
+    <dimen name="c_layout_padding">16dp</dimen>
+    <dimen name="c_layout_padding_top">26dp</dimen>
+    <dimen name="c_layout_margin_between_components">10dp</dimen>
+    <dimen name="c_layout_margin_between_components_half">5dp</dimen>
+
+
+    <dimen name="amount_currency_margin">2dp</dimen>
+
+    <!-- Font sizes-->
+    <dimen name="auth_options_text_size">16sp</dimen>
+
+
 </resources>

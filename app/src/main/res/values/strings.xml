@@ -1,5 +1,24 @@
 <resources>
-    <string name="app_name">OkayPOC</string>
+    <string name="app_name">Okay Bank</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_otp_preview">OtpPreviewActivity</string>
+    <string name="title_activity_new_recipient">NewRecipient</string>
+
+    <string name="account_recipient_label">Account of the Recipient</string>
+    <string name="submit_recipient">Submit Recipient</string>
+    <string name="new_recipient">New Recipient</string>
+    <string name="enter">Enter</string>
+    <string name="name">Name</string>
+    <string name="title_activity_transaction_preview">TransactionPreview</string>
+    <string name="description_string">A synchronous request between your server and Okaythis server that checks the authorization status of a session – Your server should perform this call to check session statuses.</string>
+    <string name="biometric">BIOMETRIC</string>
+    <string name="pin_code">PIN Code</string>
+    <string name="one_click">One Click</string>
+    <string name="authenticate_with">Authenticate with</string>
+    <string name="item_name">Item Name</string>
+    <string name="issuer">Issuer</string>
+    <string name="shipping">Shipping</string>
+    <string name="tax">Tax</string>
+    <string name="total">Total</string>
+    <string name="title_activity_use_case">UseCaseActivity</string>
 </resources>
