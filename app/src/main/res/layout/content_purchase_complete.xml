@@ -36,7 +36,7 @@
         android:id="@+id/divider"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="@dimen/c_layout_margin_between_components"
+        android:layout_marginTop="@dimen/c_layout_margin_between_components_2x"
         android:background="@color/c_light_gray"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -45,8 +45,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="@dimen/c_layout_margin_between_components"
+        android:layout_height="176dp"
+        android:layout_marginTop="@dimen/c_layout_margin_between_components_2x"
         android:padding="@dimen/c_layout_padding"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -57,16 +57,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/c_thirty_dp"
-            android:layout_marginTop="@dimen/c_thirty_dp"
             android:layout_marginEnd="36dp"
             android:fontFamily="monospace"
             android:text="@string/product_name_placeholder"
-            android:textSize="@dimen/f_text_title"
-            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            android:textSize="@dimen/f_card_issuer_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/product_image_card"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.495" />
 
         <TextView
             android:id="@+id/textView11"
@@ -93,7 +94,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/product_image_card"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="0dp"
             app:cardCornerRadius="@dimen/c_card_corner_radius"
             app:cardPreventCornerOverlap="false"
@@ -115,7 +116,7 @@
         android:id="@+id/divider2"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="@dimen/c_button_margin_top"
+        android:layout_marginTop="@dimen/c_layout_margin_between_components_2x"
         android:background="@color/c_light_gray"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
@@ -214,7 +215,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/c_layout_margin_between_components_2x"
         android:text="@string/total"
-        android:textSize="@dimen/caption_large"
         app:layout_constraintBottom_toBottomOf="@+id/textView22"
         app:layout_constraintEnd_toStartOf="@+id/textView22"
         app:layout_constraintTop_toTopOf="@+id/textView22" />

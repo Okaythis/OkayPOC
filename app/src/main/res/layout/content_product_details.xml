@@ -26,7 +26,7 @@
             android:elevation="@dimen/c_card_elevation"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="@dimen/c_button_corner_radius_2x"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="70dp"
             app:cardUseCompatPadding="false">
 
             <RelativeLayout
@@ -91,7 +91,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="120dp"
             android:layout_marginTop="270dp"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="50dp"
             android:backgroundTint="@color/colorAccent"
             android:elevation="@dimen/c_button_elevation"
             android:includeFontPadding="false"
