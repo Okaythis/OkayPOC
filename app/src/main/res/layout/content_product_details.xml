@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/c_layout_padding"
+    android:paddingBottom="@dimen/c_thirty_dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".usecases.prettythings.ui.productdetails.ProductDetailsActivity"
+    tools:showIn="@layout/activity_product_details">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/c_layout_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/c_card_elevation"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/c_button_corner_radius_2x"
+            android:layout_marginBottom="100dp"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/image_description"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/im_chair" />
+
+                <TextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="@dimen/c_forty_dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/product_name_placeholder"
+                    android:textColor="@color/c_white"
+                    android:textSize="@dimen/p_font_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/productPriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/product_amount_placeholder"
+                    android:textColor="@color/c_white"
+                    android:textSize="@dimen/p_font_size"
+                    android:layout_marginStart="@dimen/c_forty_dp"
+                    android:layout_marginBottom="@dimen/c_forty_dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/currencyTypeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/c_layout_margin_between_components_half"
+                    android:layout_marginBottom="@dimen/c_forty_dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@id/productPriceTextView"
+                    android:layout_toRightOf="@id/productPriceTextView"
+                    android:text="@string/currency_placeholder"
+                    android:textColor="@color/c_white"
+                    android:textSize="@dimen/p_font_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/purchaseButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignBaseline="@id/cardView"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="270dp"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="@color/colorAccent"
+            android:elevation="@dimen/c_button_elevation"
+            android:includeFontPadding="false"
+            android:text="@string/purchase_button"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/c_button_corner_radius_smooth" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

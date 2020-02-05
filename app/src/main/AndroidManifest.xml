@@ -11,10 +11,21 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".usecases.prettythings.ui.purchasecomplete.PurchaseCompleteActivity"
+            android:label="@string/title_activity_purchase_complete"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".usecases.prettythings.ui.billingcarddetails.BillingCardDetailsActivity"
+            android:label="@string/title_activity_billing_card_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".usecases.prettythings.ui.productdetails.ProductDetailsActivity"
+            android:label="@string/title_activity_product_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.usecases.UseCaseActivity"
             android:label="@string/title_activity_use_case"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <!-- <activity -->
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity -->
         <!-- android:name=".ui.transactionpreview.TransactionPreview" -->
         <!-- android:label="@string/title_activity_transaction_preview" -->
         <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
