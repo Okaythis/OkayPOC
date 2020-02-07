@@ -42,6 +42,7 @@
     <dimen name="f_card_size">150dp</dimen>
     <dimen name="f_card_issuer_text_size">20sp</dimen>
     <dimen name="f_text_caption">10sp</dimen>
+    <dimen name="f_text_normal">14sp</dimen>
     <dimen name="f_text_title">16sp</dimen>
     <dimen name="f_title_large">24sp</dimen>
     <dimen name="caption_large">12sp</dimen>

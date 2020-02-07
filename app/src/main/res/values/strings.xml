@@ -44,4 +44,6 @@
     <string name="product_image_description">Image Description</string>
     <string name="zero_amount">0</string>
     <string name="back">Back</string>
+    <string name="date_placeholder">1.1.2060</string>
+    <string name="company_holder">Pretty Things AS</string>
 </resources>
