@@ -54,7 +54,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/card_issuer"
-                android:textColor="@android:color/secondary_text_material_light"
                 android:textSize="@dimen/f_card_issuer_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"

@@ -11,9 +11,19 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".usecases.prettythings.ui.home.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".usecases.prettythings.ui.purchasecomplete.PurchaseCompleteActivity"
             android:label="@string/title_activity_purchase_complete"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".usecases.prettythings.ui.billingcarddetails.BillingCardDetailsActivity"
             android:label="@string/title_activity_billing_card_details"
@@ -41,11 +51,6 @@
             android:name=".ui.transactionpreview.TransactionPreview"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service

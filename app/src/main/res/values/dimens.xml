@@ -46,6 +46,7 @@
     <dimen name="f_text_title">16sp</dimen>
     <dimen name="f_title_large">24sp</dimen>
     <dimen name="caption_large">12sp</dimen>
+    <dimen name="c_card_height">250dp</dimen>
 
 
 </resources>

@@ -3,9 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/c_card_height"
+    android:layout_marginStart="@dimen/c_layout_margin_between_components_half"
+    android:layout_marginEnd="@dimen/c_layout_margin_between_components_half"
+    android:layout_marginBottom="@dimen/c_layout_margin_between_components"
+    android:padding="@dimen/c_layout_margin_between_components"
     app:cardBackgroundColor="@color/colorTranslucent"
     app:cardCornerRadius="@dimen/c_button_corner_radius_2x"
+    app:cardPreventCornerOverlap="false"
     app:cardUseCompatPadding="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,10 +24,9 @@
             android:id="@+id/productNameTextView"
             android:layout_width="0dp"
             android:layout_height="34dp"
-            android:layout_marginTop="24dp"
             android:text="@string/product_name_placeholder"
             android:textColor="@color/c_white"
-            android:textSize="@dimen/p_font_size"
+            android:textSize="@dimen/f_text_normal"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.088"
